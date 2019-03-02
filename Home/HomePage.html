@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="ISO-8859-1">
+	
+	<!-- page description -->
+	<meta name="description"
+	content=""/>
+	
+	<!-- Keywords for search engine -->
+	<meta name="keywords"
+	content=""/>
+	
+	<title>Sugar Island</title>
+	<!-- stops telephone number from being auto styled -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- for bootstraps -->
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<!-- JQuery UI-->
+	<link rel="stylesheet" type=text/css href="/webcontent/css/jquery-ui.min.css">	
+	<!-- Add social media icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- JQuery UI-->
+	<script src="/webcontent/js/jquery-ui.min.js"></script>
+	<!-- bootstraps -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- bootstraps -->
+	<link rel="stylesheet" type=text/css href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<!-- Page stylesheets-->
+	<link rel="stylesheet" href="/webcontent/Home/HomeStyleSheet.css">
+	<link rel="stylesheet" href="/webcontent/SiteStyleSheet.css">
+	
+	
+</head>
+<body onload="createInstaFeed();">
+
+	<div class="hidden-lg hidden-md" style="height:70px"></div>
+	
+	<!-- For sm and xs screen size - creates the panel that displays the title of the page, links to other pages, and the logo -->
+	<div id="headerSm" class="hidden-lg hidden-md">
+	
+		<div id="headerSm-menuHolder" onclick="changeMenuIcon(this)">
+  			<div id="headerSm-menuBar1"></div>
+  			<div id="headerSm-menuBar2"></div>
+  			<div id="headerSm-menuBar3"></div>
+  			<h4 id="headerSm-menuLabel">Menu</h4>
+		</div>
+		
+		
+		<!-- displays the map icon at the top right of the screen-->
+		<div id="headerSm-mapIconHolder">
+			<span id="headerSm-mapIcon" class="glyphicon glyphicon-map-marker"></span>
+		</div>
+		
+		<div align="center">
+
+			<!-- displays the Sugar Island logo at the top right of the screen-->
+			<div id="headerSm-logo">
+				<img width=80px height=75px class="img" src="/webcontent/Img/sugarIslandLogo.jpg">
+			</div>
+			
+		</div>
+		
+		
+	</div>
+		
+	<!-- navSm is at the bottom of the page and will be animated to the top of the screen -->
+	<div id="headerSm-navSm" class="hidden-lg hidden-md">
+	
+		<!-- creates accordion that displays links to other pages  -->
+		<div id="navSm-animationAccordion">
+					
+			<h4>Get Involved</h4>
+			
+			<div style="background:rgb(240,240,240); padding:0px;">
+			
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/GetInvolved/Donate.html" class="navSm-pageLink">Donate</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/GetInvolved/Join.html" class="navSm-pageLink">Join</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/GetInvolved/Participate.html" class="navSm-pageLink">Participate</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/GetInvolved/ContactUs.php" class="navSm-pageLink">Contact Us</a>
+				</div>
+
+			</div>
+			
+			
+			<h4>Articles</h4>
+			
+			<div style="background: rgb(240,240,240); padding:0px;">
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/Articles/MeetingMinutes.html" class="navSm-pageLink">Meeting Minutes</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/Articles/Stories.html" class="navSm-pageLink">Stories</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/Articles/Newsletter.html" class="navSm-pageLink">News Letter</a>
+				</div>
+			</div>
+			
+			
+			<h4>Explore</h4>
+			
+			<div style="background: rgb(240,240,240); padding:0px;">
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/Explore/Map.html" class="navSm-pageLink">Map</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/Explore/DoYouKnowContest.html" class="navSm-pageLink">Do You Know?</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/Explore/HistoricalProjects.html" class="navSm-pageLink">Historical Projects</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/Explore/PlacesToStay.html" class="navSm-pageLink">Places To Stay</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/Explore/ThingsToDo.html" class="navSm-pageLink">Things To Do</a>
+				</div>
+			</div>
+			
+			
+			<h4>About</h4>
+			
+			<div style="background: rgb(240,240,240); padding:0px;">
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/About/AboutUs.html" class="navSm-pageLink">Overview</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/About/Mission.html" class="navSm-pageLink">Mission</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/About/FocusAreas.html" class="navSm-pageLink">Areas of Focus</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="/webcontent/About/Values.html" class="navSm-pageLink">Values</a>
+				</div>
+			</div>
+		</div>
+		<!-- the SmNavBar is positioned absolutely at top:85px which stops the scroll bar from going all the way to the bottom
+		this is used to fix the problem -->
+		<div style="height:85px"></div>
+	
+	</div>
+	
+	
+	<!-- For lg and md screen size - creates the panel that displays the links to other pages, and the logo -->
+	<div id="headerLg" class="hidden-sm hidden-xs" style="height:80px">
+		<div align="center">
+			<div style="max-width:1200px;">
+				<!-- displays the Sugar Island logo at the top left of the screen-->
+				<span id="headerLg-logo">
+					<em>SUGAR ISLAND <br> HISTORY</em>
+					<img width=70px height=70px class="img img-responsive" src="/webcontent/Img/sugarIslandLogo.jpg">
+				</span>
+				
+				<!-- displays the donate/contact on the right of the screen-->
+				<div id="headerLg-donateContactHolder">
+					<a href="/webcontent/GetInvolved/Donate.html"><button class="btn btn-orange btn-md">Donate</button></a>
+					<a href="/webcontent/GetInvolved/ContactUs.php"><button class="btn btn-orange btn-md">Contact</button></a>
+				</div>
+				
+				
+				
+				<div align="center">
+					<!-- adds the page links -->
+					<div id="headerLg-navLg">
+			
+						<div class="navLg-pageLinkHolder" style="border-top:5px solid white">
+							<span class="navLg-pageLink"><a href="/webcontent/GetInvolved/Donate.html">GET INVOLVED</a></span>
+						</div>
+						<div class="navLg-pageLinkHolder">
+							<span class="navLg-pageLink"><a href="/webcontent/Articles/MeetingMinutes.html">ARTICLES</a></span>
+						</div>
+						<div class="navLg-pageLinkHolder">
+							<span class="navLg-pageLink"><a href="/webcontent/Explore/Map.html">EXPLORE</a></span>
+						</div>
+						<div class="navLg-pageLinkHolder">
+							<span class="navLg-pageLink"><a href="/webcontent/About/AboutUs.html">ABOUT US</a></span>
+						</div>
+						
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+		<br>
+	</div>
+	
+<!-- holds all of the content that is unique to this page -->
+<div id="contentWrapper">
+
+	<div id="sugarIslandDiv" class="HC-img" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/9/9a/Cologne_-_Panoramic_Image_of_the_old_town_at_dusk.jpg'); overflow:hidden;">
+		<br>
+		<div class="container-fluid" align="center" style="max-width:1200px; text-align:left;">
+			<div class="row">
+				<h1 class="sugarIsland-header col-lg-11 col-md-11 col-sm-11 col-xs-12">Sugar Island History Preservation Society</h1> 
+			</div>
+			<div class="row">
+				<h3 class="sugarIsland-info col-lg-11 col-md-11 col-sm-11 col-xs-12">We are dedicated to bringing together people that are interested in the history of Sugar Island.</h3>
+			</div>
+			<div class="row">
+				<a href="https://www.facebook.com/interalliance/" class="sugarIsland-socialMediaIcon fa fa-facebook"></a>		
+				<a href="https://twitter.com/interalliancegc" class="sugarIsland-socialMediaIcon fa fa-twitter"></a>
+				<!-- use image from the web for the instagram icon -->
+				<a href="https://www.instagram.com/permanentroadtrip/" class="sugarIsland-socialMediaIcon fa" style="padding:0px">
+					<img width="100%" height="100%" style="border-radius:50%; background:white;" src="https://www.sugarislandhistory.com/webcontent/Img/instagram_logo.png">
+				</a>
+			</div>
+		</div>	
+	</div>
+
+	
+	<div id="howYouCanHelpDivLg" class="HC-img hidden-sm hidden-xs" style="background-image:url('https://www.53.com/content/dam/fifth-third/heroes/1440x565-leisure-babies-banking.jpg');">
+		<div align="center">
+			
+			<div style="max-width:1200px">
+				<!-- user can select an option from the selectionBox and the designated value for that option will be displayed here -->
+				<div id="displayAreaHolder">
+					<p id="displayArea">Membership info Membership info Membership info Membership info Membership info 
+					    <br><br>
+    					<a href='../GetInvolved/Donate.html'>
+    					    <button class='btn btn-green btn-md'>
+    					        <span class='textHolder'>Donate</span>
+    					        <span class='glyphicon glyphicon-chevron-right'></span>
+    					    </button>
+    					</a>
+					</p>
+					
+				</div>
+				
+				<div id="selectionBox">
+				
+					<h3 id="selectionBox-header">How Can You Help?</h3>
+					 
+					<h4 id="selectionOption-donate" class="selectionBox-option" style="border-left:5px solid #57BC90;" onclick="changeParagraph('Donate');">Donate</h4> 
+					<h4 id="selectionOption-fundRaising" class="selectionBox-option" onclick="changeParagraph('Fund Raising');">Fund Raising</h4>
+					<h4 id="selectionOption-join" class="selectionBox-option" onclick="changeParagraph('Join');"><span>Join</span></h4>			
+					<h4 id="selectionOption-participate" class="selectionBox-option" onclick="changeParagraph('Participate');">Participate</h4> 				
+					
+	
+	
+					<h3 id="selectionBox-header">About Us?</h3>
+					
+					<h4 id="selectionOption-overview" class="selectionBox-option" onclick="changeParagraph('Overview');">Overview</h4>			
+					<h4 id="selectionOption-contact" class="selectionBox-option" onclick="changeParagraph('Contact');">Contact Us</h4> 				
+					<h4 id="selectionOption-officers" class="selectionBox-option" style="border-bottom:1px solid rgb(200,200,200);" onclick="changeParagraph('Officers');">Officers</h4> 
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="howYouCanHelpDivSm" class="HC-img hidden-lg hidden-md">
+	    
+		<!-- creates the header for the accordion -->
+		<div id="helpInfo-accordion-headerHolder" align="center">
+			<h1 id="helpInfo-headerForAccordion">Sugar Island Info</h1>
+		</div>
+		
+		<!-- creates the accordion -->
+		<div id="helpInfo-accordion" style="margin-right:20px; margin-left:20px;">
+			<h4 class="helpInfo-accordionHeader">Join</h4>
+			<div style="background: rgb(240,240,240); padding:10px;">
+				Test test tesre=huefee
+			</div>
+			
+			<h4 class="helpInfo-accordionHeader">Participate</h4>
+			<div style="background: rgb(240,240,240); padding:10px;">
+				Test test tesre=huefee Test test tesre=huefee
+			</div>
+			
+			<h4 class="helpInfo-accordionHeader">Donate</h4>
+			<div style="background: rgb(240,240,240); padding:10px;">
+				Test test tesre=huefeeTest test tesre=huefeeTest test tesre=huefee
+			</div>
+			
+			<h4 class="helpInfo-accordionHeader">Overview</h4>
+			<div style="background: rgb(240,240,240); padding:10px;">
+				Test test tesre=huefeeTest test tesre=huefeeTest test tesre=huefeeTest test tesre=huefee
+			</div>
+			
+			<h4 class="helpInfo-accordionHeader">Fund Raising</h4>
+			<div style="background: rgb(240,240,240); padding:10px;">
+				Test test tesre=huefeeTest test tesre=huefeggeeeeeeeeeeeeeeeeTest test tesre=huefeeTest test tesre=huefee
+			</div>
+			
+			<h4 class="helpInfo-accordionHeader">Officers</h4>
+			<div style="background: rgb(240,240,240); padding:10px;">
+				Test test tesre=huefeeeeggggggggggg
+			</div>
+		</div>
+		<hr style="border:1px solid black">
+	</div>
+
+	<script>
+		$("#helpInfo-accordion").accordion({
+		    // Slide animation or not or length
+		    animate: 500,
+		    // Starting tab
+		    active: 0,
+		    // Collapsible if same tab is clicked
+		    collapsible: true,
+		    // Event that triggers
+		    event: "click",
+		    heightStyle: "content"
+		  });	 	
+	</script>
+	
+	<!-- adds more margin-top to the lg and md but keeps sm and xs the same-->
+	<div class="hidden-xs hidden-sm">
+		<br><br><br>
+	</div>
+	
+	<br><br>
+	
+	<div id="communityInvolvementDiv">
+		<div align="center">
+			
+			<div style="max-width:1000px">
+			
+				<!-- has a header for the page and 2 different divs for Lg and Sm that hold the stats about the society -->
+				<div id="communityInvolvement-headerHolder">
+					<h2><b>Community</b></h2>
+					<h1><b>Involvement</b></h1>
+					<h4>We are dedicated to serve our community by preserving its history.</h4>
+				</div>
+				
+				<div class="communityInvolvement-statsHolder hidden-xs">
+					<div class="communityInvolvement-statLg">
+						<h1><b>$1000</b></h1>
+						<h3>in donations</h3>
+					</div>
+					
+					<div class="communityInvolvement-statLg">
+						<h1><b>20</b></h1>
+						<h3>members</h3>
+					</div>
+					
+					<div class="communityInvolvement-statLg">
+						<h1><b>20</b></h1>
+						<h3>years of service</h3>
+					</div>
+					
+					<div class="communityInvolvement-statLg" style="border:none">
+						<h1><b>5</b></h1>
+						<h3>Projects</h3>
+					</div>
+				</div>
+				
+				
+				<div class="communityInvolvement-statsHolder hidden-lg hidden-md hidden-sm" >
+					<div class="communityInvolvement-statSm" style="border-right:1px solid black; border-bottom:1px solid black;">
+						<h1><b>$1000</b></h1>
+						<h3>in donations</h3>
+					</div><!--
+					
+					 --><div class="communityInvolvement-statSm" style="border-bottom:1px solid black;">
+						<h1><b>20</b></h1>
+						<h3>members</h3>
+					</div>
+					<br>
+					<div class="communityInvolvement-statSm" style="border-right:1px solid black;">
+						<h1><b>20</b></h1>
+						<h3>years of service</h3>
+					</div><!-- 
+					
+					 --><div class="communityInvolvement-statSm">
+						<h1><b>5</b></h1>
+						<h3>Projects</h3>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<br>
+	
+	<br>
+	<div class="container-fluid" align="center">
+		<div align="left">
+			<br>
+			<br>
+			<br>
+			<h1 id="footer-instagramHeader">Our Instagram</h1>
+			<div id="footer-instagram-headerUnderline"></div>
+			<br>
+		</div>
+			
+		<div id="instagramWrapper" class="tabcontent">
+			<div id="instafeed" class="row"></div>
+		</div>
+	</div>
+		
+		
+	<!-- displays the bottom footnote -->
+	<div id="bottomFootnote" class="container-fluid" align="center">
+	    <!-- link to the top of the screen -->
+		<br>
+		<h3><a id="pageTop" href=#>Top of Page</a></h3>
+		
+		<div class="row" style="max-width:1200px; margin:0px 20px">
+			<!-- displays the contact info for Sugar Island -->
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="border:1px solid rgb(150,150,150); background:white; height:300px">
+				<h3 class="title"><b>Contact Us</b></h3>
+				<hr style="border:1px solid rgb(150,150,150);">
+				<h4 class="subTitle">P.O box:</h4>		
+				<h5 class="info">Box 71, SAULT SAINTE MARIE, MI 49783</h5>
+				<h4 class="subTitle">Phone:</h4>
+				<h5 class="info">(513)791-1680</h5>
+				<h4 class="subTitle">Email:</h4>
+				<h5 class="info">Jgaier@moeller.org</h5>
+
+			</div>
+			<!-- displays the contact info for INTERAlliance -->
+			<div id="newsletterHolder" class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="background:white; height:300px">
+				<h3 class="title"><b>Newsletter</b></h3>
+				<hr style="border:1px solid rgb(150,150,150);">
+				
+				<span id="footerNewsletter-responseMessage"></span>
+				<br>
+				<div></div>
+				<div class="input-group input-group-lg" style="margin-top:2px">
+					<input type="text" class="form-control" placeholder="Email" id="footerNewsletter-emailTextBar" onkeypress="emailKeyListenerFooter();">
+				 	<span class="input-group-btn">
+				    	<button class="btn btn-green" onclick="addToNewsletterFooter();" type="button">submit</button>
+					</span>
+				</div>
+				<br><br>
+				<a href="https://www.facebook.com/interalliance/" class="fa fa-facebook"></a>		
+				<a href="https://twitter.com/interalliancegc" class="fa fa-twitter"></a>
+				<!-- use image from the web for the instagram icon -->
+				<a href="https://www.instagram.com/permanentroadtrip/" class="fa" style="padding:0px">
+					<img width="100%" height="100%" style="border-radius:50%; background:white;" src="https://www.sugarislandhistory.com/webcontent/Img/instagram_logo.png">
+				</a>
+			</div>
+		</div>
+		<hr>
+		<b class="info" style="text-align:center">@ Sugar Island Historical Preservation Society. All Rights Reserved</b>
+		<br><br>
+	</div>
+</div>	
+	
+	<!-- div that covers the whole screen in order to put focus on the options in sm and xs when you hit the menu button -->
+	<div id="focusDiv" class="hidden-lg hidden-md"></div>
+
+		<!-- instafeed.js -->
+	<script type="application/javascript" src="/webcontent/js/instafeed.min.js"></script>
+	
+	<!-- Navigation JS Files -->
+	<script src="/webcontent/SiteInteractor.js"></script>
+	
+	<!-- HomeInterator Files -->
+	<script src="/webcontent/Home/HomeInteractor.js"></script>
+
+</body>
+</html>

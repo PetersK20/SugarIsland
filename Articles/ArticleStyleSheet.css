@@ -1,0 +1,75 @@
+@charset "ISO-8859-1";
+/*Styling for the Article tabs -------------------------------------------*/
+#calendar{
+    max-width:800px;
+    margin:0px;
+}
+.glyphicon.disabled{
+	opacity:.5;
+	cursor: not-allowed !important;
+}
+#meetings-leftArrow{
+	cursor:pointer;
+	font-size: 24pt;
+	float:left;
+}
+#meetings-rightArrow{
+	cursor:pointer;
+	font-size:24pt;
+	float:right;
+}
+.meetingMinute{
+	text-align:left;
+}
+@media only screen and (max-width: 800px) {
+    .meetingMinute {
+        margin:0 5%;
+    }
+}
+
+.newsletter-errorMessage{
+    font-size:12pt; 
+	font-style:italic; 
+	color:rgb(255,102,102);
+}
+.newsletter-thankYouMessage{
+    font-size:12pt; 
+	font-style:italic; 
+	color:#57BC90;
+}
+
+ol>li{
+	font-size: 21pt;
+}
+
+/*story page ------------------------------------------------------------*/
+#storyTextHolder hr{
+    background:#57BC90;
+    border:1px solid #57BC90;
+}
+
+/*subTitles*/
+#storyTextHolder h1{
+	text-align:left;
+	color:#57BC90;
+	font-size:30pt;
+}
+/*subParagraphs*/
+#storyTextHolder p{
+	text-align:left;
+	font-size:20pt;	
+	color:rgb(90,90,90);
+}
+/*subImages*/
+.storySubImage{
+	text-align:center;
+	max-width:800px;
+}
+@media only screen and (max-width: 800px) {
+    .storySubImage {
+        width:100%;
+    }
+    #storyTextHolder{
+        margin: 0 5%;
+    }
+}

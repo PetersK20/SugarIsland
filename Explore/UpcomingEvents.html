@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="ISO-8859-1">
+	
+	<!-- page description -->
+	<meta name="description"
+	content=""/>
+	
+	<!-- Keywords for search engine -->
+	<meta name="keywords"
+	content=""/>
+	
+	<title>Upcoming Events</title>
+	<!-- stops telephone number from being auto styled -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- for bootstraps -->
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<!-- JQuery UI-->
+	<link rel="stylesheet" type=text/css href="../css/jquery-ui.min.css">	
+	<!-- Add social media icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- JQuery UI-->
+	<script src="../js/jquery-ui.min.js"></script>
+	<!-- bootstraps -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- bootstraps -->
+	<link rel="stylesheet" type=text/css href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	
+	<!-- Page stylesheets-->
+	<link rel="stylesheet" href="ExploreStyleSheet.css">
+	<link rel="stylesheet" href="../SiteStyleSheet.css">
+	
+	<!-- calendar -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.0/fullcalendar.min.css">
+	<script src="../js/Moments.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.0/fullcalendar.min.js"></script>
+	
+</head>
+<body onload="getThingsToDoData();">
+	<div class="hidden-lg hidden-md" style="height:70px"></div>
+	
+	<!-- For sm and xs screen size - creates the panel that displays the title of the page, links to other pages, and the logo -->
+	<div id="headerSm" class="hidden-lg hidden-md">
+	
+		<div id="headerSm-menuHolder" onclick="changeMenuIcon(this)">
+  			<div id="headerSm-menuBar1"></div>
+  			<div id="headerSm-menuBar2"></div>
+  			<div id="headerSm-menuBar3"></div>
+  			<h4 id="headerSm-menuLabel">Menu</h4>
+		</div>
+		
+		
+		<!-- displays the map icon at the top right of the screen-->
+		<div id="headerSm-mapIconHolder">
+			<span id="headerSm-mapIcon" class="glyphicon glyphicon-map-marker"></span>
+		</div>
+		
+		<div align="center">
+
+			<!-- displays the Sugar Island logo at the top right of the screen-->
+			<div id="headerSm-logo">
+				<img width=80px height=75px class="img" src="../Img/sugarIslandLogo.jpg">
+			</div>
+			
+		</div>
+		
+		
+	</div>
+		
+	<!-- navSm is at the bottom of the page and will be animated to the top of the screen -->
+	<div id="headerSm-navSm" class="hidden-lg hidden-md">
+	
+		<!-- creates accordion that displays links to other pages  -->
+		<div id="navSm-animationAccordion">
+					
+			<h4 style="border-top:1px solid black;">Get Involved</h4>
+			
+			<div style="background:rgb(240,240,240); padding:0px;">
+			
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/GetInvolved/Donate.html" class="navSm-pageLink">Donate</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/GetInvolved/FundRaising.html" class="navSm-pageLink">Fund Raising</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/GetInvolved/Join.html" class="navSm-pageLink">Join</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/GetInvolved/Participate.html" class="navSm-pageLink">Participate</a>
+				</div>
+				
+			</div>
+			
+			
+			<h4>Articles</h4>
+			
+			<div style="background: rgb(240,240,240); padding:0px;">
+			    <div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/Articles/MeetingMinutes.html" class="navSm-pageLink">Meeting Minutes</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/Articles/Stories.html" class="navSm-pageLink">Stories</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/Articles/Newsletter.html" class="navSm-pageLink">News Letter</a>
+				</div >
+			</div>
+			
+			
+			<h4>Explore</h4>
+			
+			<div style="background: rgb(240,240,240); padding:0px;">
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/Explore/Map.html" class="navSm-pageLink">Historical Sites</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/Explore/DoYouKnowContest.html" class="navSm-pageLink">Do You Know?</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/Explore/HistoricalProjects.html" class="navSm-pageLink">Historical Projects</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/Explore/UpcomingEvents.html" class="navSm-pageLink active">Upcoming Events</a>
+				</div>
+			</div>
+			
+			
+			<h4>About</h4>
+			
+			<div style="background: rgb(240,240,240); padding:0px;">
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/About/AboutUs.html" class="navSm-pageLink">About Us</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/About/Members.html" class="navSm-pageLink">Our Members</a>
+				</div>
+				<hr>
+				<div class="navSm-pageLinkHolder">
+					<a href="https://www.sugarislandhistory.com/webcontent/About/ContactUs.php" class="navSm-pageLink">Contact Us</a>
+				</div>
+			</div>
+		</div>
+		<!-- the SmNavBar is positioned absolutely at top:85px which stops the scroll bar from going all the way to the bottom
+		this is used to fix the problem -->
+		<div style="height:85px"></div>
+	
+	</div>
+	
+	
+	<!-- For lg and md screen size - creates the panel that displays the links to other pages, and the logo -->
+	<div id="headerLg" class="hidden-sm hidden-xs">
+		<div align="center">
+			<div style="max-width:1200px;">
+				<!-- displays the Sugar Island logo at the top left of the screen-->
+				<span id="headerLg-logo">
+					<em>SUGAR ISLAND <br> HISTORY</em>
+					<img width=70px height=70px class="img img-responsive" src="../Img/sugarIslandLogo.jpg">
+		
+				</span>
+				
+				<!-- displays the donate/contact on the right of the screen-->
+				<div id="headerLg-donateContactHolder">
+					<a href="../GetInvolved/Donate.html"><button class="btn btn-orange btn-md">Donate</button></a>
+					<a href="../About/ContactUs.php"><button class="btn btn-orange btn-md">Contact</button></a>
+				</div>
+				
+				
+				
+				<div align="center">
+					<!-- adds the page links -->
+					<div id="headerLg-navLg">
+			
+						<div class="navLg-pageLinkHolder">
+							<span class="navLg-pageLink"><a href="../GetInvolved/Donate.html">GET INVOLVED</a></span>
+						</div>
+						<div class="navLg-pageLinkHolder">
+							<span class="navLg-pageLink"><a href="../Articles/MeetingMinutes.html">ARTICLES</a></span>
+						</div>
+						<div class="navLg-pageLinkHolder active">
+							<span class="navLg-pageLink"><a href="../Explore/Map.html">EXPLORE</a></span>
+						</div>
+						<div class="navLg-pageLinkHolder">
+							<span class="navLg-pageLink"><a href="../About/AboutUs.html">ABOUT US</a></span>
+						</div>
+						
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+		<br>
+		<div align="center">
+			<div id="headerLg-subNavigation">
+				<div class="subNavigation-pageLinkHolder fourSubLinks">
+					<span class="subNavigation-pageLink"><a href="Map.html">Historical Sites</a></span>
+				</div>
+				<div class="subNavigation-pageLinkHolder fourSubLinks">
+					<span class="subNavigation-pageLink"><a href="DoYouKnowContest.html">Do you Know?</a></span>
+				</div>
+				<div class="subNavigation-pageLinkHolder fourSubLinks">
+					<span class="subNavigation-pageLink"><a href="HistoricalProjects.html">Historical Projects</a></span>
+				</div>
+				<div class="subNavigation-pageLinkHolder fourSubLinks active">
+					<span class="subNavigation-pageLink"><a href="UpcomingEvents.html">Upcoming Events</a></span>
+				</div>	
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- subNav is moved up 25px so the top 25px of the headerImg was displayed under the subNav, this fixes that-->
+	<div style="height:29px" class="hidden-sm hidden-xs">
+	</div>
+	
+	<div id="headerImg" style="background-image:url('https://www.53.com/content/dam/fifth-third/heroes/1440x330-Professional-Business-126.jpg')">
+
+		<div class="container-fluid" align="center">
+			<div class="col-xs-12 col-md-10">
+				<h1>Upcoming Events</h1> 
+			</div>
+			<div class="col-xs-12 col-md-10">
+				<h3>Check out upcoming events.</h3>
+			</div>
+		</div>	
+		
+	</div>
+	
+<!-- holds all of the content that is unique to this page -->
+<div id="contentWrapper">
+    <br>
+	<h1 class="page-subTitle">Search Upcoming Events</h1>
+	<hr>
+	
+	<!--creates the search bar and category multi-select-->
+	<div class="container-fluid">
+    	<div class="row">
+    		  
+    		<div class="col-lg-offset-4 col-md-offset-3 col-sm-offset-2 col-lg-4 col-md-6 col-sm-8 col-xs-12">
+    			<div class="input-group input-group-md">
+    			  	<input id="mapActivitySearchTextbar" type="text" class="form-control" placeholder="Location Name">
+    			  	<span class="input-group-btn">
+    			  		<button id="mapActivitySearchButton" class="btn btn-green" type="button">Search</button>
+    				</span>
+    			</div>
+    		</div>
+    	</div>
+	</div>
+	<br>
+	
+	
+	<!-- creates the google map -->
+	<div>
+		<div id="mapHolder"></div>
+	</div>
+	
+	
+	<!-- The Modal when map marker is clicked -->
+	<div id="map-modal">
+		
+		 <!-- The Close Button -->
+		 <span id="map-modal-close">&times;</span>
+		
+		<!-- Modal Caption (Image Text) -->
+		<div id="map-modal-title"></div>
+		
+		<!-- Carousel -->
+		<!-- Surround everything with a div with the class carousel slide -->
+		<div id="theCarousel" class="carousel slide" data-ride="carousel" style="z-index:1000000;">
+		 
+			<!-- Define how many slides to put in the carousel -->
+			<ol id="carouselSlideList" class="carousel-indicators">
+			    <!--JS will populate this list, info here will be replaced - it is just needed to setup the carousel-->
+			    <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+				
+			</ol >
+			 
+			<!-- Define the text to place over the image -->
+			<div id="carouselSlides" class="carousel-inner">
+			    <!-- JS will create the slides, info here will be replaced - it is just needed to setup the carousel-->
+			    <div class="item active" >
+					<div class ="slide1"></div>
+						<div class="carousel-caption">
+							<h1>Amazing Backgrounds</h1>
+						</div>
+					</div>
+			</div>
+		
+		
+			<!-- Set the actions to take when the arrows are clicked -->
+			<a class="left carousel-control" href="#theCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"> </span>
+			</a>
+			<a class="right carousel-control" href="#theCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+			
+		</div>
+		
+		<!-- Modal Caption (Image Text) -->
+		<div id="map-modal-caption"></div>
+	</div>		
+	
+	
+	
+	
+	<br>
+	
+	
+	<h1 class="page-subTitle">Upcoming Events Calendar</h1>
+	<hr>
+	
+	<div align="center">
+	    <div class="page-defaultMargin" id="calendar"></div>
+	</div>
+	
+	<div id="calendarModal" title="Sugar Island Events">
+    </div>
+    
+	<script>
+	    $("#calendarModal").dialog({
+            autoOpen:false,
+        });
+    </script>
+	
+	<br><br><br><br>
+	
+	<br>
+	<div class="container-fluid" align="center">
+		<div align="left">
+			<br>
+			<br>
+			<br>
+			<h1 id="footer-instagramHeader">Our Instagram</h1>
+			<div id="footer-instagram-headerUnderline"></div>
+			<br>
+		</div>
+			
+		<div id="instagramWrapper" class="tabcontent">
+			<div id="instafeed" class="row"></div>
+		</div>
+	</div>
+		
+		
+	<!-- displays the bottom footnote -->
+	<div id="bottomFootnote" class="container-fluid" align="center">
+	    <!-- link to the top of the screen -->
+		<br>
+		<h3><a id="pageTop" href=#>Top of Page</a></h3>
+		
+		<div class="row" style="max-width:1200px; margin:0px 20px">
+			<!-- displays the contact info for Sugar Island -->
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="border:1px solid rgb(150,150,150); background:white; height:300px">
+				<h3 class="title"><b>Contact Us</b></h3>
+				<hr style="border:1px solid rgb(150,150,150);">
+				<h4 class="subTitle">P.O box:</h4>		
+				<h5 class="info">Box 71, SAULT SAINTE MARIE, MI 49783</h5>
+				<h4 class="subTitle">Phone:</h4>
+				<h5 class="info">(513)791-1680</h5>
+				<h4 class="subTitle">Email:</h4>
+				<h5 class="info">Jgaier@moeller.org</h5>
+
+			</div>
+			<!-- displays the contact info for INTERAlliance -->
+			<div id="newsletterHolder" class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="background:white; height:300px">
+				<h3 class="title"><b>Newsletter</b></h3>
+				<hr style="border:1px solid rgb(150,150,150);">
+				
+				<span id="footerNewsletter-responseMessage"></span>
+				<br>
+				<div></div>
+				<div class="input-group input-group-lg" style="margin-top:2px">
+					<input type="text" class="form-control" placeholder="Email" id="footerNewsletter-emailTextBar" onkeypress="emailKeyListenerFooter();">
+				 	<span class="input-group-btn">
+				    	<button class="btn btn-green" onclick="addToNewsletterFooter();" type="button">submit</button>
+					</span>
+				</div>
+				<br><br>
+				<a href="https://www.facebook.com/interalliance/" class="fa fa-facebook"></a>		
+				<a href="https://twitter.com/interalliancegc" class="fa fa-twitter"></a>
+				<!-- use image from the web for the instagram icon -->
+				<a href="https://www.instagram.com/permanentroadtrip/" class="fa" style="padding:0px">
+					<img width="100%" height="100%" style="border-radius:50%; background:white;" src="https://www.sugarislandhistory.com/webcontent/Img/instagram_logo.png">
+				</a>
+			</div>
+		</div>
+		<hr>
+		<b class="info" style="text-align:center">@ Sugar Island Historical Preservation Society. All Rights Reserved</b>
+		<br><br>
+	</div>
+</div>	
+	
+	<!-- div that covers the whole screen in order to put focus on the options in sm and xs when you hit the menu button -->
+	<div id="focusDiv" class="hidden-lg hidden-md"></div>
+
+	
+	<!-- Navigation JS Files -->
+	<script src="../SiteInteractor.js"></script>
+	<!-- instafeed.js -->
+	<script type="application/javascript" src="../js/instafeed.min.js"></script>	
+	<!-- Google maps -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGX124XWa6mbKYPGA7XY0jKpiyrTlg6Mc&callback=e"></script>
+	<!-- ExploreInterator Files -->
+	<script src="ExploreInteractor.js"></script>
+
+	
+</html>

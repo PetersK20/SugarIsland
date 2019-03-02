@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+.aboutUs_header{
+    text-align:center;
+}
+.aboutUs_imgSm, .aboutUs_imageLg, .aboutUs_imgText, .aboutUs_imgText>p, .aboutUs_imgText>p>strong{
+    margin-bottom:0;
+    margin:0;
+    padding:0;
+}
+.aboutUs_imgText{
+    text-align:left;
+}
+.aboutUs_imageLg, .aboutUs_imgSm{
+    width:100%;
+}
+#aboutUs_members{
+    text-align:left;
+}
+.member_image{
+    height:200px;
+    width:200px;
+    text-align:center;
+    background-size:cover;
+	background-position: center center;
+    background-repeat: no-repeat;
+    border-radius:50%;
+}
+.member-name{
+    font-size: 24px;
+    line-height: 24px;
+    color: #414141;
+    margin: 0 0 8px;
+    font-family: "Playfair Display","Times New Roman",serif;
+}
+.member-position{
+    font-size: 14px;
+    line-height: 10px;
+    letter-spacing: 0.05em;
+    color: #9F9F9F;
+    text-transform: uppercase;
+}
+.member-description{
+    font-size: 18px;
+}
